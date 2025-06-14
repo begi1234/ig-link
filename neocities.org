@@ -1,0 +1,126 @@
+// Core configuration
+const uniqueKey = 'YourAppKey', // Customize as needed
+      domainUrl = 'yourdomain.com', // Update to your domain
+      timeDelay = 1000, // Changed from 1500 to 1000 (1 second)
+      directOpenToggle = false, // Disable if not needed
+      scriptOnOffToggle = true, // Enable script if needed
+      footerBannerToggle = false, // Disable footer banner
+      widgetToggle = false; // Disable widget if not needed
+
+// Remove tracking-related variables
+var chromeIntentUrl = '',
+    sessionId = 'static-session-id', // Static ID to avoid UUID generation
+    cookieSid = '';
+
+// Remove tracking endpoints
+const endPoint = '',
+      cutEndPoint = '',
+      successEndPoint = '',
+      imageUrl = ''; // Remove external image (logo)
+
+// Neutralize tracking functions
+function post(_0x182567) {}
+function postUrlTrack(_0x49e2aa) {}
+function postSuccessTrack(_0x5cf5f4) {}
+
+// Simplify session details (no external requests)
+function getSessDetails(_0x5a25bb) {
+    return Promise.resolve({
+        sessionId: sessionId,
+        userAgent: _0x5a25bb,
+        url: window.location.href,
+        tagId: uniqueKey,
+        domainUrl: domainUrl,
+        time: new Date().toISOString()
+    });
+}
+
+// Disable page change tracking
+function onPageChange() {}
+
+// Disable Chrome redirection handling
+function handleChromeRedirectionChange() {}
+
+// Remove cookie and session storage functions (if unused)
+function setCookie(_0x4e0d92, _0x5ae166, _0x104f13, _0x1fff25, _0x66e030) {}
+function getCookie(_0x38dec7) { return null; }
+
+// Simplify UUID generation (if needed, otherwise remove)
+function genUUID() {
+    return 'static-uuid-' + Math.random().toString(36).substring(2, 15);
+}
+
+// Device and browser detection (keep if needed for other functionality)
+function isMobile() {
+    return /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/i.test(navigator.userAgent.toLowerCase()) || false;
+}
+
+function isAndroid() {
+    return /Android/i.test(navigator.userAgent);
+}
+
+function isIOS() {
+    return /(iPhone|iPod|iPad)/i.test(navigator.userAgent);
+}
+
+function isInApp() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const webViewRegex = /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/ig;
+    return Boolean(userAgent.match(webViewRegex));
+}
+
+// Simplified startup function (remove domain and credit checks)
+function startup() {
+    if (typeof window === 'undefined') {
+        // console.log('Script must be run in a browser environment');
+        return false;
+    }
+    // Remove domain validation
+    // Remove credit expiration check
+    return true;
+}
+
+// Remove event listeners for tracking
+// document.addEventListener('visibilitychange', handleChromeRedirectionChange, false);
+// document.addEventListener('DOMContentLoaded', onPageChange);
+// window.addEventListener('popstate', onPageChange);
+
+// Disable history.pushState override
+const originalPushState = history?.pushState;
+history.pushState = function () {
+    originalPushState?.apply(history, arguments);
+};
+
+// Keep browser, device, OS, and engine detection if needed
+function getBrowser(_0x509a6f) {
+    // Simplified version (keep only if required)
+    return { Name: 'Unknown', Version: null };
+}
+
+function getDevice(_0x509a6f) {
+    return 'Unknown';
+}
+
+function getEngine(_0x531f20) {
+    return { Name: 'Unknown', Version: null };
+}
+
+function getOS(_0x32074e) {
+    return { Name: 'Unknown', Version: null };
+}
+
+// Remove anti-debugging/self-protection code
+const _0x38c97b = () => () => {};
+const _0x58eec4 = _0x38c97b();
+_0x58eec4();
+
+// Remove obfuscation lookup (simplified, keep if other parts rely on it)
+function _0x2aa7(_0x2aa7) {
+    return _0x2aa7; // Neutralize obfuscation if possible
+}
+const _0x452e49 = _0x2aa7;
+
+// Initialize script
+if (startup()) {
+    // Add your custom logic here if needed
+}
