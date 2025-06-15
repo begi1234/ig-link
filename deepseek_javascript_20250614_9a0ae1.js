@@ -172,7 +172,7 @@ function goToURL() {
       }
     }
   }
-  const _0x2aec16 = _0x5ec35d ? "&utm_term=inappredirect" : "?utm_term=inappredirect";
+  const _0x2aec16 = _0x5ec35d ? "&utm_term=justredirect" : "?utm_term=justredirect";
   const _0x2bab59 = _0x5eb28a?.['replace'](/^https?:\/\//, '');
   if (/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
     const _0xb7a64f = "x-safari-https://" + _0x2bab59 + _0x2aec16 + "&adz_redir=s&adz_plt=" + _0x1c2ad1 + "&adz_sid=" + sessionId;
@@ -208,7 +208,7 @@ function goToURLWithoutWidget() {
       }
     }
   }
-  const _0x570f42 = _0x1b35f6 ? "&utm_term=inappredirect" : "?utm_term=inappredirect";
+  const _0x570f42 = _0x1b35f6 ? "&utm_term=justredirect" : "?utm_term=justredirect";
   const _0x35de48 = _0x52d536?.['replace'](/^https?:\/\//, '');
   if (/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
     const _0x2560b4 = "x-safari-https://" + _0x35de48 + _0x570f42 + "&adz_redir=s&adz_plt=" + _0x24bfc9 + "&adz_sid=" + sessionId;
