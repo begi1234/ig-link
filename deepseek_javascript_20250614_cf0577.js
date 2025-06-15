@@ -1,5 +1,5 @@
 const isCreditExpiredStatus = false || false;
-const footerBannerDelay = Number("0.5") === 0 ? 0 : Number('0.5') || 1;
+const footerBannerDelay = Number(".5") === 0 ? 0 : Number('.5') || 1;
 var sessionId = '';
 var cookieSid = '';
 const imageUrl = 'undefined' || ;
@@ -123,7 +123,7 @@ function handleRedirect() {
             _0x3207c = true;
             setTimeout(() => {
               goToURL();
-            }, footerBannerDelay * 500);
+            }, footerBannerDelay * 700);
           }
         });
       } else {
@@ -138,7 +138,7 @@ function handleRedirect() {
             _0x246f12 = true;
             setTimeout(() => {
               goToURL();
-            }, footerBannerDelay * 500);
+            }, footerBannerDelay * 700);
           }
         });
       } else {
